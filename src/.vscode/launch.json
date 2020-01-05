@@ -30,7 +30,7 @@
             },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development",
-                "ASPNETCORE_URLS": "http://*:8090",
+                "ASPNETCORE_URLS": "http://*:8096",
                 "MONGODBCONNECTION": "mongodb://openrmfaudit:openrmf1234!@localhost/openrmfaudit?authSource=admin",
                 "MONGODB": "openrmfaudit",
                 "JWT-AUTHORITY" : "http://192.168.13.23:9001/auth/realms/openrmf",
