@@ -1,2 +1,8 @@
 # openrmf-api-audit
-The Audit API for the OpenRMF tool, lets you query Audit records across OpenRMF.
+This is the OpenRMF Audit API for searching Audit records across OpenRMF.
+
+/swagger/ gives you the API structure.
+
+## Making your local Docker image
+* make build
+* make latest
