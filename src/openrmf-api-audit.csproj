@@ -8,12 +8,12 @@
     <ProjectGuid>{44b59f1a-f564-4dcf-bb12-63ab5880f524}</ProjectGuid>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <NoWarn>$(NoWarn);1591</NoWarn>
-    <Version>0.11</Version>
+    <Version>0.13.01</Version>
     <InformationalVersion>This is a beta of the OpenRMF Tool Audit API from Cingulara</InformationalVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="jaeger" Version="0.3.6" />
+    <PackageReference Include="jaeger" Version="0.3.7" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="2.2.0" />
@@ -29,7 +29,7 @@
     <PackageReference Include="OpenTracing.Contrib.NetCore" Version="0.6.2" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="4.0.1" />
     <PackageReference Include="mongodb.driver" Version="2.7.2" />
-    <PackageReference Include="prometheus-net.AspNetCore" Version="3.4.0" />
+    <PackageReference Include="prometheus-net.AspNetCore" Version="3.5.0" />
   </ItemGroup>
 
   <ItemGroup>
