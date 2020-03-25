@@ -14,13 +14,13 @@ namespace openrmf_audit_api.Controllers
     [Route("/")]
     public class AuditController : Controller
     {
-	    private readonly IAuditRepository _scoreRepo;
+	    private readonly IAuditRepository _auditRepo;
        private readonly ILogger<AuditController> _logger;
 
-        public AuditController(IAuditRepository scoreRepo, ILogger<AuditController> logger)
+        public AuditController(IAuditRepository auditRepo, ILogger<AuditController> logger)
         {
             _logger = logger;
-            _scoreRepo = scoreRepo;
+            _auditRepo = auditRepo;
         }
 
         /// <summary>
@@ -40,7 +40,7 @@ namespace openrmf_audit_api.Controllers
             try {
                 _logger.LogInformation("Calling GetScore({0})", id);
                 Audit auditRecord = new Audit();
-                auditRecord = await _scoreRepo.GetAudit(id);
+                auditRecord = await _auditRepo.GetAudit(id);
                 if (auditRecord == null) {                    
                     _logger.LogWarning("Calling GetAudit({0}) returned an invalid Audit record", id);
                     return NotFound();
@@ -69,7 +69,7 @@ namespace openrmf_audit_api.Controllers
             try {
                 _logger.LogInformation("Calling GetAllAudits()");
                 IEnumerable<Audit> auditListing;
-                auditListing = await _scoreRepo.GetAllAudits();
+                auditListing = await _auditRepo.GetAllAudits();
                 if (auditListing == null) {    
                     _logger.LogWarning("Calling GetAllAudits() returned an invalid list of Audit records");
                     return NotFound();

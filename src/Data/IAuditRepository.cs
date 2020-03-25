@@ -8,5 +8,6 @@ namespace openrmf_audit_api.Data {
     {
         Task<IEnumerable<Audit>> GetAllAudits();
         Task<Audit> GetAudit(string id);
+        bool HealthStatus();
     }
 }
