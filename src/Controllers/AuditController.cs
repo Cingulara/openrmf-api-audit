@@ -8,6 +8,7 @@ using openrmf_audit_api.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.Extensions.Logging;
 using openrmf_audit_api.Data;
+using System.Linq;
 
 namespace openrmf_audit_api.Controllers
 {
@@ -75,7 +76,7 @@ namespace openrmf_audit_api.Controllers
                     return NotFound();
                 }
                 _logger.LogInformation("Called GetAllAudits() successfully");
-                return Ok(auditListing);
+                return Ok(auditListing.ToList().OrderByDescending(x => x.created).ToList());
             }
             catch (Exception ex) {
                 _logger.LogError(ex, "GetAllAudits() Error Retrieving list of Audits");
