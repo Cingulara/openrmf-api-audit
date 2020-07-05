@@ -13,7 +13,7 @@ RUN dotnet publish -c Release -o out
 
 # build runtime image
 # FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
-FROM openrmf-base-api:1.2
+FROM cingulara/openrmf-base-api:1.2
 RUN apt-get update && apt-get -y upgrade && apt-get -y dist-upgrade && apt-get -y install ca-certificates &&  apt-get clean
 
 RUN mkdir /app
