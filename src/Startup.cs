@@ -119,7 +119,7 @@ namespace openrmf_audit_api
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                     builder =>
                     {
-                        builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin().AllowCredentials();
+                        builder.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin();
                     });
             });
 
