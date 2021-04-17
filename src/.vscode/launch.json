@@ -35,11 +35,11 @@
                 "DB": "openrmfaudit",
                 "DBTYPE": "mongo",
                 "JWT-AUTHORITY" : "http://localhost:9001/auth/realms/openrmf",
-                "JWT-CLIENT": "openrmf",
-                "JAEGER_AGENT_HOST": "localhost",
-                "JAEGER_AGENT_PORT": "6831",
-                "JAEGER_SERVICE_NAME": "openrmf-api-audit",
-                "JAEGER_SAMPLER_TYPE": "const"
+                "JWT-CLIENT": "openrmf"
+                // "JAEGER_AGENT_HOST": "localhost",
+                // "JAEGER_AGENT_PORT": "6831",
+                // "JAEGER_SERVICE_NAME": "openrmf-api-audit",
+                // "JAEGER_SAMPLER_TYPE": "const"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
