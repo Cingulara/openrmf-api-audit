@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.1/openrmf-api-audit.dll",
+            "program": "${workspaceFolder}/bin/Debug/net6.0/openrmf-api-audit.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,
@@ -36,10 +36,6 @@
                 "DBTYPE": "mongo",
                 "JWTAUTHORITY" : "http://localhost:9001/auth/realms/openrmf",
                 "JWTCLIENT": "openrmf"
-                // "JAEGER_AGENT_HOST": "localhost",
-                // "JAEGER_AGENT_PORT": "6831",
-                // "JAEGER_SERVICE_NAME": "openrmf-api-audit",
-                // "JAEGER_SAMPLER_TYPE": "const"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"

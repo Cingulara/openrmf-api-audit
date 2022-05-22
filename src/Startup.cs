@@ -69,7 +69,7 @@ namespace openrmf_audit_api
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "OpenRMF Audit API", Version = "v1", 
-                    Description = "The Audit API that goes with the OpenRMF tool",
+                    Description = "The Audit API that goes with the OpenRMF OSS Application",
                     Contact = new OpenApiContact
                     {
                         Name = "Dale Bingham",
