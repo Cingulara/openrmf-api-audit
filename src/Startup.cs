@@ -113,7 +113,7 @@ namespace openrmf_audit_api
                         c.Response.StatusCode = 401;
                         c.Response.ContentType = "text/plain";
 
-                        Console.WriteLine("openrmf-api-read JWT Error: " + c.Exception.ToString());
+                        Console.WriteLine("openrmf-api-audit JWT Error: " + c.Exception.ToString());
 
                         return c.Response.WriteAsync("The JWT validation with the server did not return correctly. Please check with your Application Administrator.");
                     }
