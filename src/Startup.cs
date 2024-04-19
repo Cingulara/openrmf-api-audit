@@ -13,8 +13,6 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Prometheus;
-using OpenTracing;
-using OpenTracing.Util;
 
 using openrmf_audit_api.Models;
 using openrmf_audit_api.Data;
@@ -42,24 +40,6 @@ namespace openrmf_audit_api
                     options.ConnectionString = Environment.GetEnvironmentVariable("DBCONNECTION");
                     options.Database = Environment.GetEnvironmentVariable("DB");
                 });
-            }
-            
-            if (Environment.GetEnvironmentVariable("JAEGER_AGENT_HOST") != null && 
-                !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("JAEGER_AGENT_HOST"))) {
-            
-                    // Use "OpenTracing.Contrib.NetCore" to automatically generate spans for ASP.NET Core
-                    services.AddSingleton<ITracer>(serviceProvider =>  
-                    {                
-                        ILoggerFactory loggerFactory = serviceProvider.GetRequiredService<ILoggerFactory>();  
-                        // use the environment variables to setup the Jaeger endpoints
-                        var config = Jaeger.Configuration.FromEnv(loggerFactory);
-                        var tracer = config.GetTracer();
-                    
-                        GlobalTracer.Register(tracer);  
-                    
-                        return tracer;  
-                    });
-                    services.AddOpenTracing();
             }
 
             // add repositories            

@@ -20,31 +20,15 @@ namespace openrmf_audit_api.Data {
 
         public async Task<IEnumerable<Audit>> GetAllAudits()
         {
-            try
-            {
                 return await _context.Audits
                         .Find(_ => true).ToListAsync();
-            }
-            catch (Exception ex)
-            {
-                // log or manage the exception
-                throw ex;
-            }
         }
 
         // query after Id or InternalId (BSonId value)
         public async Task<Audit> GetAudit(string id)
         {
-            try
-            {
                 ObjectId internalId = GetInternalId(id);
                 return await _context.Audits.Find(Audit => Audit.InternalId == GetInternalId(id)).FirstOrDefaultAsync();
-            }
-            catch (Exception ex)
-            {
-                // log or manage the exception
-                throw ex;
-            }
         }
 
         private ObjectId GetInternalId(string id)
