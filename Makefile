@@ -1,4 +1,4 @@
-VERSION ?= 1.12.00
+VERSION ?= 1.14.02
 NAME ?= "openrmf-api-audit"
 AUTHOR ?= "Dale Bingham"
 PORT_EXT ?= 8096
